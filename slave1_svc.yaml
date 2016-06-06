@@ -1,0 +1,53 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: slave1
+  namespace: test
+  labels:
+    app: hadoop
+    name: slave1
+    tier: backend
+spec:
+  clusterIP: None
+  ports:
+    #datanode
+    - name: p1
+      port: 50010
+    - name: p2
+      port: 50020
+    - name: p3
+      port: 50075
+    - name: p4
+      port: 50475
+    # nodemanager
+    - name: p5
+      port: 8040
+    - name: p6
+      port: 8041
+    - name: p7
+      port: 8042
+    #hbase
+    - name: p8
+      port: 16020
+    - name: p9
+      port: 16030
+    - name: p10
+      port: 2181
+    - name: p11
+      port: 2888
+    - name: p12
+      port: 3888
+    # spark
+    - name: p13
+      port: 18081
+    - name: p14
+      port: 7078
+    # other
+    - name: p15
+      port: 22
+    - name: p16
+      port: 9001
+  selector:
+    app: hadoop
+    name: hadoop-slave1-rc
+    tier: backend
