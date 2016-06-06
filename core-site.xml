@@ -1,0 +1,19 @@
+<configuration>
+    <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://master:9000</value>
+    </property>
+    <property>
+        <name>hadoop.tmp.dir</name>
+        <value>file:/root/data/tmp</value>
+        <description>A base for other temporary directories.</description>
+    </property>
+    <property>
+        <name>hadoop.proxyuser.spark.hosts</name>                                              
+        <value>*</value>                                                                       
+    </property>                                                                                
+    <property>                                                                                 
+        <name>hadoop.proxyuser.spark.groups</name>                                             
+        <value>*</value>                                                                       
+    </property>                                                                                
+</configuration> 
