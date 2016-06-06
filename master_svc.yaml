@@ -7,6 +7,7 @@ metadata:
     component: hadoop-master
     role: master
 spec:
+  clusterIP: None
   selector:
     component: hadoop-master
   ports:
